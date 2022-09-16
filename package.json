@@ -1,0 +1,37 @@
+{
+  "name": "typescript-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codimatic-org/typescript-project-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codimatic-org/typescript-project-template/issues"
+  },
+  "homepage": "https://github.com/codimatic-org/typescript-project-template#readme",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -w",
+    "start": "node build/index.js",
+    "dev": "nodemon ./src/index.ts",
+    "watch:start": "tsc-watch --onSuccess \"node ./build/index.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "generate-tsconfig": "tsc --init"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "dotenv": "^16.0.2",
+    "prettier": "^2.7.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.8.3"
+  },
+  "engines": {
+    "node": ">=17.0.0",
+    "npm": ">=7.0.0"
+  }
+}
